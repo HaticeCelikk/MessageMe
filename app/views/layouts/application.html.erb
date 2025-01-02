@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Message Me" %></title>
+    <%= favicon_link_tag%>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -20,31 +21,17 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :application, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
   </head>
 
   <body>
-      <div class="ui small menu">
-      <a class="active item">
-        Home
-      </a>
-      <a class="item">
-        Messages
-      </a>
-      <div class="right menu">
-        <div class="ui dropdown item">
-          Language <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item">English</a>
-            <a class="item">Russian</a>
-            <a class="item">Spanish</a>
-          </div>
-        </div>
-        <div class="item">
-            <div class="ui primary button">Sign Up</div>
-        </div>
+   
+      <div class="ui small inverted menu">
+        <%= render 'layouts/navigation' %>
+        
       </div>
+    <div class="ui container">
+      <%= yield %>
     </div>
-
-    <%= yield %>
   </body>
 </html>

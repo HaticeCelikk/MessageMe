@@ -2,3 +2,8 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "jquery"
+import "semantic-ui"
+
+document.addEventListener('turbo:load', function() {
+  $('.ui.dropdown').dropdown();
+});
