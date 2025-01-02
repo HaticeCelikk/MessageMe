@@ -29,11 +29,12 @@ gem "solid_queue"
 gem "solid_cable"
 
 #------------------------
-gem "propshaft"
-gem 'semantic-ui-sass'
-gem 'sassc-rails'
-gem 'jquery-rails'
-
+gem "semantic-ui-sass"
+gem "sassc-rails"
+gem "jquery-rails"
+gem "bcrypt", "~> 3.1.7"
+gem "faker"
+gem "hirb" # for better console output
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
