@@ -12,3 +12,5 @@ pin "semantic-ui", to: "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1
 # filepath: /Users/hatice/rails_project/rails_8/MessageMe/config/importmap.rb
 
 
+pin "@rails/actioncable", to: "actioncable.esm.js"
+pin_all_from "app/javascript/channels", under: "channels"
